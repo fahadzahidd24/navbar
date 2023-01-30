@@ -1,0 +1,122 @@
+*{
+  /* padding: 0; */
+  margin: 0;
+}
+nav{
+  background-color: rgb(228, 226, 226);
+  /* display: flex; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.row{
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+}
+h2,i{
+  color: rgb(10, 97, 155);
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 20px;
+  font-weight: 900;
+  /* width: 100%; */
+}
+.col2{
+  display: none;
+}
+.linksList{
+  display: flex;
+  flex-direction: column;
+}
+.links{
+  background-color:rgb(228, 226, 226);
+  /* height: 25vh; */
+  /* transition: all 2s ease-in-out; */
+  animation: slide 0.6s forwards;
+  /* z-index: 1; */
+}
+@keyframes slide {
+  from{
+    transform: translateX(-50%);
+    opacity: 0;
+  }
+  to{
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+li{
+  list-style: none;
+  margin-bottom: 1em;
+  text-align: left;
+}
+a{
+  text-transform: capitalize; 
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande';
+  color: rgb(66, 66, 66);
+  font-weight: 700;
+  text-decoration: none;
+  margin-left: -1em;
+}
+a:hover{
+  color: rgb(10, 97, 155);
+  opacity: 0.7;
+}
+.social{
+  min-width: 40%;
+
+}
+.social>ul{
+  display: flex;
+  justify-content: space-between;
+}
+.rotate{
+  /* color: black; */
+  animation: rotate 0.5s forwards;
+}
+@keyframes rotate {
+  from{
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(-90deg);
+  }
+  
+}
+
+@media screen and (min-width:797.98px) {
+
+  .lines{
+    display: none;
+  }
+  .social{
+    min-width: 300px;
+  }
+  nav{
+    flex-direction: row;
+    width: 100%;
+  }
+  .col{
+    display: flex;
+    align-items: center;
+  }
+  .col2{
+    display: block;
+  }
+  .linksList{
+    flex-direction: row;
+  }
+  li{
+    padding-left: 2em;
+    padding-right: 2em;
+    margin: 0;
+  }
+  .row{
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .links{
+    animation: none;
+  }
+}
